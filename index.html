@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ella Cohn | Onboarding Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root{
+  --ink:#111;
+  --muted:#555;
+  --bg:#f3f4f6;
+
+  --primary:#1e3a8a;
+  --sidebar:#2c3e50;
+  --sidebar-border:#3f5368;
+  --sidebar-text:#f8fafc;
+  --sidebar-hover:#3f5368;
+
+  --card:#ffffff;
+  --border:#d1d5db;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Times New Roman", Times, serif;
+  font-size:14.5px;
+  line-height:1.6;
+  background:var(--bg);
+  color:var(--ink);
+}
+
+a{text-decoration:none;color:inherit;}
+
+.layout{
+  display:grid;
+  grid-template-columns:260px 1fr;
+  min-height:100vh;
+}
+
+aside{
+  background:var(--sidebar);
+  color:var(--sidebar-text);
+  padding:22px 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow-y:auto;
+  border-right:1px solid var(--sidebar-border);
+}
+
+.brand{
+  border:1px solid var(--sidebar-border);
+  padding:12px;
+  margin-bottom:18px;
+}
+.brand h1{
+  margin:0;
+  font-size:1.05rem;
+}
+.brand p{
+  margin:4px 0 0;
+  font-size:0.8rem;
+  color:#cbd5e0;
+}
+
+nav a{
+  display:block;
+  padding:7px;
+  margin-bottom:5px;
+  font-size:0.85rem;
+  border:1px solid transparent;
+}
+nav a:hover{
+  background:var(--sidebar-hover);
+}
+nav a.active{
+  background:var(--sidebar-hover);
+  border-color:var(--sidebar-border);
+}
+
+.sidebar-bottom{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.address-box{
+  border:1px solid var(--sidebar-border);
+  padding:10px;
+  font-size:0.82rem;
+  line-height:1.45;
+  color:var(--sidebar-text);
+  background:transparent;
+}
+.address-box strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:0.85rem;
+}
+
+.side-footer{
+  border-top:1px solid var(--sidebar-border);
+  padding-top:12px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+}
+
+.social-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border:1px solid var(--sidebar-border);
+  color:var(--sidebar-text);
+}
+
+.social-btn:hover{
+  background:var(--sidebar-hover);
+}
+
+.social-btn svg{
+  width:18px;
+  height:18px;
+}
+
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+main{
+  padding:32px 28px;
+}
+
+.container{
+  max-width:850px;
+  margin:auto;
+}
+
+header{
+  border:1px solid var(--border);
+  background:var(--card);
+  padding:18px;
+  margin-bottom:30px;
+}
+header h1{
+  margin:0 0 4px;
+  font-size:1.3rem;
+}
+header p{
+  margin:0;
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+section{
+  margin-bottom:36px;
+}
+section h2{
+  margin-bottom:4px;
+  font-size:1.15rem;
+}
+.rule{
+  width:60px;
+  height:2px;
+  background:var(--primary);
+  margin-bottom:12px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:18px;
+}
+
+.bio-wrap{
+  display:grid;
+  grid-template-columns:1fr 160px;
+  gap:20px;
+}
+
+.headshot{
+  width:160px;
+  height:auto;
+  border:1px solid var(--border);
+}
+
+.acumen-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  padding:6px 10px;
+  border:1px solid var(--border);
+  font-size:0.85rem;
+  color:var(--primary);
+}
+
+.acumen-link:hover{
+  background:#f0f0f0;
+}
+
+.acumen-link svg{
+  width:14px;
+  height:14px;
+}
+
+footer{
+  margin-top:40px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+  font-size:0.8rem;
+  display:flex;
+  justify-content:space-between;
+}
+</style>
+</head>
+
+<body>
+
+<div class="layout">
+
+  <aside>
+
+    <div>
+      <div class="brand">
+        <h1>Ella Soleil Cohn</h1>
+      </div>
+
+      <nav id="sideNav">
+        <a href="#bio" class="active">Introductory Bio</a>
+        <a href="#analysis">Rhetorical Analysis</a>
+        <a href="#application">Application Letter</a>
+        <a href="#recommendation">Unsolicited Recommendation</a>
+        <a href="#memo">Memo</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+
+      <div class="address-box">
+        Ella Cohn<br>
+        919 E Genesee St<br>
+        Syracuse, NY 13210
+      </div>
+
+      <div class="side-footer">
+
+        <a class="social-btn" href="https://www.linkedin.com/in/ella-cohn26/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4.98 3.5A2.48 2.48 0 1 1 0 3.5a2.48 2.48 0 0 1 4.98 0zM.41 8h4.9v16H.41V8zM8 8h4.71v2.19h.07c.66-1.24 2.27-2.47 4.68-2.47 5 0 5.93 3.29 5.93 7.57V24h-4.9v-8.69c0-2.07-.04-4.73-2.88-4.73-2.88 0-3.32 2.25-3.32 4.58V24H8V8z"/>
+          </svg>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+
+        <a class="social-btn" href="tel:+19142827811" aria-label="Call">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/>
+          </svg>
+          <span class="sr-only">Call</span>
+        </a>
+
+        <a class="social-btn" href="mailto:elcohn@syr.edu" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span class="sr-only">Email</span>
+        </a>
+
+      </div>
+    </div>
+
+  </aside>
+
+  <main>
+    <div class="container">
+
+      <header>
+        <h1>Onboarding Portfolio</h1>
+        <p>WRT 307 Service Learning</p>
+      </header>
+
+      <section id="bio">
+        <h2>Introductory Bio</h2>
+        <div class="rule"></div>
+        <div class="card bio-wrap">
+          <div>
+            <p>
+              Ella is a student at Syracuse University’s Martin J. Whitman School of Management, she is pursuing a degree in Business Analytics and Finance. She’s interested in organizations that effectively implement social impact investments with unique strategies and sustainability. Her nonprofit and service work demonstrates her responsibility, cooperation, organizational skills, communication expertise, analysis capabilities, and resource management skills. As a financial analyst intern and finance tutor, she’s learned to use analytical and critical thinking to solve problems with tools like Tableau Software, SQL, JavaScript, HTML/CSS, Excel, R Studio, and Python. Ella is motivated by opportunities that connect financial success with social, environmental, and economic progress. She’s drawn to organizations that understand the purpose of social change and want to join their team to achieve this impact.
+            </p>
+          </div>
+          <div>
+            <img src="img/headshot.png" alt="Headshot of Ella Cohn" class="headshot">
+          </div>
+        </div>
+      </section>
+
+      <section id="analysis">
+        <h2>Rhetorical Analysis</h2>
+        <div class="rule"></div>
+        <div class="card">
+          <p>
+            Acumen is a nonprofit organization that has been investing in sustainability and social impact. Its mission is based on making business enterprises profitable that serve low- and moderate-income populations by giving them patient capital to industries that are critical. Acumen addresses long-term global challenges by using both its financial tools and dedication to social change. Acumen was created to address poverty through a new model that is based on investment principles and mission-oriented values. The non-profit invests in business organizations operating industries such as energy, agriculture, education, and health. Its main focus as an impact investment organization is using capital to drive change sustainably while the core mission is based on professionalism, results, and long-term solutions.
+          </p>
+          <p>
+            The website does an exceptional job in highlighting Acumen’s mission and impact investing strategy. It aims at long-term change through patient capital and sustainable poverty tackling. Acumen’s culture is also depicted through its focus on dignity, accountability, and impact. There are sections on its global investments, leadership initiatives, and partnerships, giving one an idea of how Acumen operates. Acumen’s website demonstrates its commitment to social impact and systemic change.
+          </p>
+
+          <a class="acumen-link" href="https://acumen.org/" target="_blank" rel="noopener" aria-label="Visit Acumen website">
+            Visit Acumen
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h5V3H3v7h2V5zm0 14v-5H3v7h7v-2H5z"/>
+            </svg>
+          </a>
+
+        </div>
+      </section>
+
+      <section id="application">
+        <h2>Application Letter</h2>
+        <div class="rule"></div>
+
+        <div class="card">
+
+          <p>
+            Lyndsey Weiner, Professor<br>
+            Writing Department<br>
+            Syracuse University<br>
+            Syracuse, New York 13210
+          </p>
+
+          <p>Dear Professor Weiner,</p>
+
+          <p>
+            I am writing to express my interest in the Service Learning Student position in WRT 307. I am currently a senior in the Martin J. Whitman School of Management pursuing a degree in Business Analytics and Finance. I am interested in  this course because of its great focus on community involvement and learning from real-life issues that occur outside of school. This learning approach is important to my personal growth and because it brings a benefit to the communities engaged.
+          </p>
+
+          <p>
+            I am eager to explore the hands-on service-learning opportunities offered in this course while strengthening my professional writing skills. As an ambitious and dedicated individual, I am passionate about giving back to communities through direct engagement, which this course emphasizes. My interest in WRT 307 is not only based on my own growth, but also on the opportunity to contribute meaningfully to projects towards participating communities.
+          </p>
+
+          <p>
+            I have volunteered with nonprofit organizations such as We Rise Above the Streets and the Samaritan Center. I am also part of a community service club where I am currently an active member and have served as a treasurer on the executive board in the past. These experiences helped me understand the importance of recognizing community needs in order to achieve organizational goals. Through them, I learned the value of taking ownership, communicating effectively, and showing respect when working with others.
+          </p>
+
+          <p>
+            I will contribute to the success of this course by applying professional skills from my prior work and academic experiences, together with a commitment to thoughtful high-quality work. I believe in collaboration and accountability. I try to promote an engaging and respectful learning environment through persistence and constructive feedback.
+          </p>
+
+          <p>
+            Thank you for considering my application. I look forward to the opportunity to further discuss how my background and skills align with the goals of WRT 307 and to contribute positively to its service-learning initiatives.
+          </p>
+
+          <p>
+            Sincerely,<br>
+            Ella Cohn
+          </p>
+
+          <hr>
+
+          <h3 style="margin-top:20px; font-size:1rem;">Analysis of Application Letter</h3>
+
+          <p>
+            This application letter expresses interest from a student to join WRT 307 service learning section. The letter showcases her credibility by using her education background and her leadership and service experiences. Her volunteer work and executive board participation also reflect her commitment, responsibility, and motivation. She discusses her reasons for being improved by this course. Professional writing while working with the community. The writer shows enthusiasm and knowledge for the course’s intent by connecting personal growth with service-learning. The letter communicates her interest through demonstrating her qualifications, enthusiasm, and the importance of the course in her professional writing.
+          </p>
+
+        </div>
+      </section>
+
+      <section id="recommendation">
+        <h2>Unsolicited Recommendation</h2>
+        <div class="rule"></div>
+        <div class="card">
+          <p>Dear Kaelin Feliu,</p>
+
+          <p>
+            I am writing to you to offer a few clear improvements to our chapters operational processes, which I believe will elevate our efficiency, accountability, and longevity as a chapter. Naturally, since this letter is unsolicited, I hope its purpose serves to build our infrastructure for upcoming administrations. I offer these suggestions with respect for the work that has already been done and with recognition that our chapter continues to grow and evolve each year.
+          </p>
+
+          <p>
+            Currently, service hours are logged through the APO online portal but must be entered by an executive board member. While this structure is formal, it places full responsibility on one officer. If entries are delayed or overlooked, members may not receive proper credit. I recommend implementing a secondary digital confirmation form after each event that automatically stores attendance in a shared spreadsheet. This would serve as a backup record, allowing officers to cross-check submissions before final portal entry. It would improve transparency and reduce the risk of missing or disputed hours. Additionally, this system could allow members to independently confirm their hours and attendance to events, overall reducing confusion and improving communication between general members and the executive board.
+          </p>
+
+          <p>
+            In addition, reimbursement currently requires members or officers to pay out of pocket for event expenses and wait for repayment. Although they are handled responsibly, this system places unnecessary financial liability on individuals. Establishing a Venmo Business account linked to chapter funds and issuing a debit card for authorized purchases would centralize spending. Transactions would be recorded directly through the chapter account, reducing reconciliation errors and minimizing administrative follow-up. This adjustment would also create a clearer record of expenses in real time, which could assist with budgeting decisions and financial planning for future events.
+          </p>
+
+          <p>
+            Lastly, I recommend that the chapter consider allocating a portion of excess reserve funds into short-term Certificates of Deposit (CDs). At present, chapter funds remain in a standard account that generates minimal return. Furthermore, the chapter can place a conservative percentage of reserves into a CD with staggered maturity dates, which would allow it to earn interest income. Although small, it may be used to offset programming costs or provide funding for new initiatives. Over time, even modest interest earnings could support chapter sustainability and reduce reliance on emergency fundraising efforts.
+          </p>
+          <p>
+            I am aware our current systems work because they are familiar and easily managed within a student organization structure. My aim is not to create more complexity, but to make a few adjustments to existing structures to improve clarity, minimize financial risk, and improve continuity between leaders. I believe these small structural changes would strengthen our foundation while preserving the collaborative culture that defines our chapter.
+          </p>
+
+          <p>
+            Thank you for reviewing these suggestions. I suggest these with respect towards our chapter and a desire to contribute towards its future growth. I would be happy to further explain these ideas if the executive board finds these changes worthy of consideration.
+          </p>
+
+          <p>
+            Sincerely,<br>
+            Ella Cohn
+          </p>
+        </div>
+      </section>
+
+      <section id="memo">
+        <h2>Memo</h2>
+        <div class="rule"></div>
+
+        <div class="card">
+
+          <p><strong>Original Memo</strong></p>
+
+          <p><strong>To:</strong> All Employees<br>
+          <strong>From:</strong> C. K. Mitchell<br>
+          <strong>Subject:</strong> Smoke-Free Environment</p>
+
+          <p>
+            Thereby notify you that beginning in two months, Fitness Exercise Equipment, Inc. will institute a new policy concerning employee contributions to the cost of their health care insurance. Employees who smoke will pay 15% more than those who don't.
+          </p>
+
+          <p>
+            The delay between this announcement and the beginning date for this new policy will allow any employees who smoke the chance to enroll in courses which, I hope, will help them break or curtail their habit. In accordance with my concern for the wellness of all employees, this will encourage all employees to stop smoking.
+          </p>
+
+          <hr>
+
+          <p><strong>Revised Memo</strong></p>
+
+          <p><strong>To:</strong> All Employees<br>
+          <strong>From:</strong> C. K. Mitchell<br>
+          <strong>Subject:</strong> Smoke-Free Environment</p>
+
+          <p>
+            This message is to inform all employees of the upcoming change to our health care contribution policy, which will take place two months from now. The change to this policy means employees who smoke, use tobacco, nicotine, vaping, or other combustible materials, etc., will pay 15% more for their health care than employees who do not.
+          </p>
+
+          <p>
+            This decision is based on the increased costs of health care. As costs continue to escalate, our intention is to bring costs under control in an effective manner while continuing to provide comprehensive health care services to all employees. The company’s contribution toward health insurance will not change, and non-smokers will continue paying the same rate.
+          </p>
+
+          <p>
+            We also understand how personal health and financial matters are. Our reason for having this policy, therefore, is not intended to cause discomfort, but instead, it is intended for us to maintain a healthy work culture and sustain our benefits program for long. For this reason, it shall be one of the goals of this policy to provide employees who intend to stop using tobacco, vaping, cannabis, and smoking-related products within the two-month timeframe access to programs meant for ending smoking cessation.
+          </p>
+
+          <p>
+            In addition, we would like to make our policy on cannabis use clear in accordance with the law in New York State. Though recreational use of cannabis by an adult not in the course of employment is acceptable in New York State, and certified medical cannabis use is protected by state law, smoking, vaping, and using cannabis of any kind on company property and during company hours is not tolerated. How an employee presents themselves while coming to work, impaired by cannabis and any and all substances in general, is not acceptable.
+          </p>
+
+          <p>
+            The firm is dedicated to complying with all relevant state laws regarding certified medical cannabis patients. Any employees requiring accommodation in the case of the use of medical cannabis are expected to provide the necessary medical paperwork to the Human Resource Department. The firm will directly engage in the interactive process for determining the necessary accommodations that will satisfy the needs of the employees using medical cannabis. 
+          </p>
+
+          <p>
+            Any employees with questions or concerns to contact Human Resources for further information. We continue to strive to work together to ensure a healthy work environment and to enhance our current success in our organization.
+          </p>
+
+          <hr>
+
+          <p><strong>C.K.’s Objectives</strong></p>
+          <ul>
+            <li>Clearly communicate the new health care contribution policy to employees and when it will begin.</li>
+            <li>Discuss the rationale for the change is needed because of health care costs.</li>
+            <li>To create a healthy, safe, supportive, and involving work environment that promotes healthy behaviors and reduces health risks</li>
+            <li>Build trust through transparency and clear communication.</li>
+          </ul>
+
+          <p><strong>Areas to Increase Effectiveness</strong></p>
+          <ul>
+            <li>Strengthen tone with more empathetic language to reduce resistance.</li>
+            <li>Back up the policy with transparent financial data and explanation to enhance transparency and minimize employee resistance.</li>
+            <li>Emphasize the fact that the policy is no personal judgment against employees who smoke, but strictly a financial and wellness-based decision.            </li>
+            <li>Identify the types of smoking products included in the policy.</li>
+            <li>Explain consistency with New York cannabis laws to reinforce fairness and safety.</li>
+          </ul>
+
+        </div>
+      </section>
+
+      <footer>
+        <span>© ESMC 2026</span>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script>
+
+const navLinks = document.querySelectorAll("#sideNav a");
+navLinks.forEach(link=>{
+  link.addEventListener("click",()=>{
+    navLinks.forEach(l=>l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+</script>
+
+</body>
+</html>
