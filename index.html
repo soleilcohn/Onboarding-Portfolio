@@ -139,12 +139,17 @@ nav a.active{
 }
 
 main{
-  padding:32px 28px;
+  padding:32px 28px 0;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
 }
 
 .container{
   max-width:850px;
-  margin:auto;
+  margin:0 auto;
+  width:100%;
+  flex:1;
 }
 
 header{
@@ -214,15 +219,22 @@ section h2{
   height:14px;
 }
 
-footer{
-  margin-top:40px;
-  padding-top:14px;
-  border-top:1px solid var(--border);
-  font-size:0.8rem;
-  display:flex;
-  justify-content:space-between;
+footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: 4px 0 2px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.1;
+}
+
+footer p {
+  margin: 2px 0;
+  font-size: inherit;
+  color: var(--muted);
 }
 </style>
+
 </head>
 
 <body>
@@ -298,7 +310,7 @@ footer{
         <div class="card bio-wrap">
           <div>
             <p>
-              Ella is a student at Syracuse University’s Martin J. Whitman School of Management, she is pursuing a degree in Business Analytics and Finance. She’s interested in organizations that effectively implement social impact investments with unique strategies and sustainability. Her nonprofit and service work demonstrates her responsibility, cooperation, organizational skills, communication expertise, analysis capabilities, and resource management skills. As a financial analyst intern and finance tutor, she’s learned to use analytical and critical thinking to solve problems with tools like Tableau Software, SQL, JavaScript, HTML/CSS, Excel, R Studio, and Python. Ella is motivated by opportunities that connect financial success with social, environmental, and economic progress. She’s drawn to organizations that understand the purpose of social change and want to join their team to achieve this impact.
+              Ella is a student at Syracuse University's Martin J. Whitman School of Management, she is pursuing a degree in Business Analytics and Finance. She's interested in organizations that effectively implement social impact investments with unique strategies and sustainability. Her nonprofit and service work demonstrates her responsibility, cooperation, organizational skills, communication expertise, analysis capabilities, and resource management skills. As a financial analyst intern and finance tutor, she's learned to use analytical and critical thinking to solve problems with tools like Tableau Software, SQL, JavaScript, HTML/CSS, Excel, R Studio, and Python. Ella is motivated by opportunities that connect financial success with social, environmental, and economic progress. She's drawn to organizations that understand the purpose of social change and want to join their team to achieve this impact.
             </p>
           </div>
           <div>
@@ -315,7 +327,7 @@ footer{
             Acumen is a nonprofit organization that has been investing in sustainability and social impact. Its mission is based on making business enterprises profitable that serve low- and moderate-income populations by giving them patient capital to industries that are critical. Acumen addresses long-term global challenges by using both its financial tools and dedication to social change. Acumen was created to address poverty through a new model that is based on investment principles and mission-oriented values. The non-profit invests in business organizations operating industries such as energy, agriculture, education, and health. Its main focus as an impact investment organization is using capital to drive change sustainably while the core mission is based on professionalism, results, and long-term solutions.
           </p>
           <p>
-            The website does an exceptional job in highlighting Acumen’s mission and impact investing strategy. It aims at long-term change through patient capital and sustainable poverty tackling. Acumen’s culture is also depicted through its focus on dignity, accountability, and impact. There are sections on its global investments, leadership initiatives, and partnerships, giving one an idea of how Acumen operates. Acumen’s website demonstrates its commitment to social impact and systemic change.
+            The website does an exceptional job in highlighting Acumen's mission and impact investing strategy. It aims at long-term change through patient capital and sustainable poverty tackling. Acumen's culture is also depicted through its focus on dignity, accountability, and impact. There are sections on its global investments, leadership initiatives, and partnerships, giving one an idea of how Acumen operates. Acumen's website demonstrates its commitment to social impact and systemic change.
           </p>
 
           <a class="acumen-link" href="https://acumen.org/" target="_blank" rel="noopener" aria-label="Visit Acumen website">
@@ -374,7 +386,7 @@ footer{
           <h3 style="margin-top:20px; font-size:1rem;">Analysis of Application Letter</h3>
 
           <p>
-            This application letter expresses interest from a student to join WRT 307 service learning section. The letter showcases her credibility by using her education background and her leadership and service experiences. Her volunteer work and executive board participation also reflect her commitment, responsibility, and motivation. She discusses her reasons for being improved by this course. Professional writing while working with the community. The writer shows enthusiasm and knowledge for the course’s intent by connecting personal growth with service-learning. The letter communicates her interest through demonstrating her qualifications, enthusiasm, and the importance of the course in her professional writing.
+            This application letter expresses interest from a student to join WRT 307 service learning section. The letter showcases her credibility by using her education background and her leadership and service experiences. Her volunteer work and executive board participation also reflect her commitment, responsibility, and motivation. She discusses her reasons for being improved by this course. Professional writing while working with the community. The writer shows enthusiasm and knowledge for the course's intent by connecting personal growth with service-learning. The letter communicates her interest through demonstrating her qualifications, enthusiasm, and the importance of the course in her professional writing.
           </p>
 
         </div>
@@ -449,7 +461,7 @@ footer{
           </p>
 
           <p>
-            This decision is based on the increased costs of health care. As costs continue to escalate, our intention is to bring costs under control in an effective manner while continuing to provide comprehensive health care services to all employees. The company’s contribution toward health insurance will not change, and non-smokers will continue paying the same rate.
+            This decision is based on the increased costs of health care. As costs continue to escalate, our intention is to bring costs under control in an effective manner while continuing to provide comprehensive health care services to all employees. The company's contribution toward health insurance will not change, and non-smokers will continue paying the same rate.
           </p>
 
           <p>
@@ -470,7 +482,7 @@ footer{
 
           <hr>
 
-          <p><strong>C.K.’s Objectives</strong></p>
+          <p><strong>C.K.'s Objectives</strong></p>
           <ul>
             <li>Clearly communicate the new health care contribution policy to employees and when it will begin.</li>
             <li>Discuss the rationale for the change is needed because of health care costs.</li>
@@ -490,11 +502,17 @@ footer{
         </div>
       </section>
 
-      <footer>
-        <span>© ESMC 2026</span>
-      </footer>
+    </div><!-- end .container -->
 
-    </div>
+    <footer>
+      <p class="footer-top">
+        WRT 307 Agency Project | Group 3 | Syracuse University | Spring 2026
+      </p>
+      <p class="footer-bottom">
+        @ 2026 ESMC 
+      </p>
+    </footer>
+
   </main>
 
 </div>
