@@ -1,4 +1,4 @@
-Onboarding Portfolio – WRT 307 Service Learning
+Onboarding Portfolio – WRT 307 Service Learning   
 Last Edit: 2026-02-12 
 ============================================================
 
